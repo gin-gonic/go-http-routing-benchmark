@@ -18,7 +18,7 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/gowww/router v1.0.0
 	github.com/julienschmidt/httprouter v1.3.1-0.20200114094804-8c9f31f047a3
-	github.com/labstack/echo/v4 v4.1.16
+	github.com/labstack/echo/v4 v4.9.1
 	github.com/lunny/log v0.0.0-20160921050905-7887c61bf0de
 	github.com/lunny/tango v0.5.6
 	github.com/mikespook/possum v0.0.0-20170224044927-56d7ebb6470b
@@ -67,9 +67,9 @@ require (
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
-	github.com/labstack/gommon v0.3.0 // indirect
+	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/mattn/go-colorable v0.1.6 // indirect
+	github.com/mattn/go-colorable v0.1.11 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -93,7 +93,7 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	github.com/unknwon/com v1.0.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasttemplate v1.1.0 // indirect
+	github.com/valyala/fasttemplate v1.2.1 // indirect
 	github.com/vulcand/predicate v1.2.0 // indirect
 	github.com/zeebo/xxh3 v1.0.1 // indirect
 	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
