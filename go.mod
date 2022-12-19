@@ -6,7 +6,7 @@ require (
 	github.com/aerogo/aero v1.3.59
 	github.com/ant0ine/go-json-rest v3.3.2+incompatible
 	github.com/astaxie/beego v1.12.3
-	github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40
+	github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f
 	github.com/dimfeld/httptreemux v5.0.1+incompatible
 	github.com/emicklei/go-restful/v3 v3.1.0
 	github.com/gin-gonic/gin v1.6.3-0.20200518075035-acbb3d4f42cb
