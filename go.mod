@@ -31,7 +31,7 @@ require (
 	github.com/ursiform/bear v1.0.1
 	github.com/vanng822/r2router v0.0.0-20150523112421-1023140a4f30
 	github.com/vulcand/route v0.1.0
-	github.com/zenazn/goji v0.9.0
+	github.com/zenazn/goji v1.0.1
 	goji.io v2.0.2+incompatible
 	gopkg.in/macaron.v1 v1.3.6
 )
