@@ -28,7 +28,7 @@ import (
 	"github.com/dimfeld/httptreemux"
 	"github.com/emicklei/go-restful/v3"
 	"github.com/gin-gonic/gin"
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/go-martini/martini"
 	"github.com/go-zoo/bone"
 	"github.com/gocraft/web"
@@ -38,7 +38,6 @@ import (
 	"github.com/labstack/echo/v4"
 	llog "github.com/lunny/log"
 	"github.com/lunny/tango"
-	vulcan "github.com/mailgun/route"
 	"github.com/mikespook/possum"
 	possumrouter "github.com/mikespook/possum/router"
 	possumview "github.com/mikespook/possum/view"
@@ -48,6 +47,7 @@ import (
 	"github.com/pilu/traffic"
 	"github.com/plimble/ace"
 	"github.com/rcrowley/go-tigertonic"
+	vulcan "github.com/vulcand/route"
 
 	// "github.com/revel/pathtree"
 	// "github.com/revel/revel"
@@ -150,10 +150,12 @@ func aeroHandlerWrite(ctx aero.Context) error {
 	io.WriteString(ctx.Response().Internal(), ctx.Get("name"))
 	return nil
 }
+
 func aeroHandlerTest(ctx aero.Context) error {
 	io.WriteString(ctx.Response().Internal(), ctx.Request().Path())
 	return nil
 }
+
 func loadAero(routes []route) http.Handler {
 	var h aero.Handler = aeroHandler
 	if loadTestHandler {
@@ -178,6 +180,7 @@ func loadAero(routes []route) http.Handler {
 	}
 	return app
 }
+
 func loadAeroSingle(method, path string, h aero.Handler) http.Handler {
 	app := aero.New()
 	switch method {
@@ -1113,7 +1116,7 @@ func macaronHandlerTest(c *macaron.Context) string {
 }
 
 func loadMacaron(routes []route) http.Handler {
-	var h = []macaron.Handler{macaronHandler}
+	h := []macaron.Handler{macaronHandler}
 	if loadTestHandler {
 		h[0] = macaronHandlerTest
 	}

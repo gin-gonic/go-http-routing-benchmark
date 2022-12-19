@@ -10,7 +10,7 @@ require (
 	github.com/dimfeld/httptreemux v5.0.1+incompatible
 	github.com/emicklei/go-restful/v3 v3.1.0
 	github.com/gin-gonic/gin v1.6.3-0.20200518075035-acbb3d4f42cb
-	github.com/go-chi/chi v4.1.1+incompatible
+	github.com/go-chi/chi/v5 v5.0.8
 	github.com/go-martini/martini v0.0.0-20170121215854-22fa46961aab
 	github.com/go-playground/lars v4.0.1+incompatible
 	github.com/go-zoo/bone v1.3.0
@@ -21,7 +21,6 @@ require (
 	github.com/labstack/echo/v4 v4.1.16
 	github.com/lunny/log v0.0.0-20160921050905-7887c61bf0de
 	github.com/lunny/tango v0.5.6
-	github.com/mailgun/route v0.0.0-20181101151700-58b44163b968
 	github.com/mikespook/possum v0.0.0-20170224044927-56d7ebb6470b
 	github.com/naoina/denco v0.0.0-20180930074809-8475105a6b4c
 	github.com/naoina/kocha-urlrouter v0.0.0-20140609163054-ad3a6f079210
@@ -31,6 +30,7 @@ require (
 	github.com/typepress/rivet v1.1.1-0.20151208095308-d62b4fcaf6b9
 	github.com/ursiform/bear v1.0.1
 	github.com/vanng822/r2router v0.0.0-20150523112421-1023140a4f30
+	github.com/vulcand/route v0.1.0
 	github.com/zenazn/goji v0.9.0
 	goji.io v2.0.2+incompatible
 	gopkg.in/macaron.v1 v1.3.6
@@ -60,10 +60,10 @@ require (
 	github.com/golang/protobuf v1.3.3 // indirect
 	github.com/gorilla/sessions v1.2.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
-	github.com/gravitational/trace v1.1.11 // indirect
-	github.com/jonboulle/clockwork v0.1.0 // indirect
+	github.com/gravitational/trace v1.1.16-0.20220114165159-14a9a7dd6aaf // indirect
+	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/labstack/gommon v0.3.0 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
 	github.com/mattn/go-colorable v0.1.6 // indirect
@@ -79,18 +79,19 @@ require (
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0 // indirect
 	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b // indirect
 	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
-	github.com/sirupsen/logrus v1.6.0 // indirect
+	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/tinylib/msgp v1.1.0 // indirect
 	github.com/ugorji/go/codec v1.1.7 // indirect
 	github.com/unknwon/com v1.0.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.1.0 // indirect
-	github.com/vulcand/predicate v1.1.0 // indirect
+	github.com/vulcand/predicate v1.2.0 // indirect
 	github.com/zeebo/xxh3 v0.0.0-20191227220208-65f423c10688 // indirect
-	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79 // indirect
-	golang.org/x/net v0.0.0-20200506145744-7e3656a0809f // indirect
-	golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3 // indirect
-	golang.org/x/text v0.3.2 // indirect
+	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
+	golang.org/x/net v0.0.0-20220826154423-83b083e8dc8b // indirect
+	golang.org/x/sys v0.0.0-20220829200755-d48e67d00261 // indirect
+	golang.org/x/term v0.0.0-20220722155259-a9ba230a4035 // indirect
+	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/fsnotify.v1 v1.4.7 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/ini.v1 v1.55.0 // indirect
