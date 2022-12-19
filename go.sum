@@ -151,8 +151,8 @@ github.com/gorilla/sessions v1.2.0 h1:S7P+1Hm5V/AT9cjEcUD5uDaQSX0OE577aCXgoaKpYb
 github.com/gorilla/sessions v1.2.0/go.mod h1:dk2InVEVJ0sfLlnXv9EAgkf6ecYs/i80K/zI+bUmuGM=
 github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
 github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
-github.com/gowww/router v0.0.0-20180327195201-5f9c626ef619 h1:nS1DFy3mh1wK3zm1xGtvMnWje5zA9zVJTLuPKBovHVw=
-github.com/gowww/router v0.0.0-20180327195201-5f9c626ef619/go.mod h1:avUfKJbpfLNee1EI8ur7ckKAuIuT7hHNZhGrBsRKnNY=
+github.com/gowww/router v1.0.0 h1:UGxwPMbCo6n8Qzr/3C+zHW9oKoo4iNXTdn3qcEPbLIg=
+github.com/gowww/router v1.0.0/go.mod h1:7eIR50rN5p0haIGEqmlRmBnHsYmECLLwxXW3tliO5ac=
 github.com/gravitational/trace v1.1.16-0.20220114165159-14a9a7dd6aaf h1:C1GPyPJrOlJlIrcaBBiBpDsqZena2Ks8spa5xZqr1XQ=
 github.com/gravitational/trace v1.1.16-0.20220114165159-14a9a7dd6aaf/go.mod h1:zXqxTI6jXDdKnlf8s+nT+3c8LrwUEy3yNpO4XJL90lA=
 github.com/hashicorp/golang-lru v0.5.4 h1:YDjusn29QI/Das2iO9M0BHnIbxPeyuCHsjMW+lJfyTc=
