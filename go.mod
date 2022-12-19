@@ -3,7 +3,7 @@ module github.com/julienschmidt/go-http-routing-benchmark
 go 1.19
 
 require (
-	github.com/aerogo/aero v1.3.54
+	github.com/aerogo/aero v1.3.59
 	github.com/ant0ine/go-json-rest v3.3.2+incompatible
 	github.com/astaxie/beego v1.12.1
 	github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40
@@ -40,14 +40,13 @@ require (
 	gitea.com/lunny/log v0.0.0-20190322053110-01b5df579c4e // indirect
 	github.com/aerogo/csp v0.1.10 // indirect
 	github.com/aerogo/http v1.1.3 // indirect
-	github.com/aerogo/linter-performance v1.0.7 // indirect
 	github.com/aerogo/session v0.1.9 // indirect
 	github.com/aerogo/session-store-memory v0.1.9 // indirect
-	github.com/akyoto/color v1.8.11 // indirect
+	github.com/akyoto/color v1.8.12 // indirect
 	github.com/akyoto/colorable v0.1.7 // indirect
-	github.com/akyoto/hash v0.4.10 // indirect
+	github.com/akyoto/hash v0.5.0 // indirect
 	github.com/akyoto/stringutils v0.3.1 // indirect
-	github.com/akyoto/tty v0.1.3 // indirect
+	github.com/akyoto/tty v0.1.4 // indirect
 	github.com/akyoto/uuid v1.1.3 // indirect
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
@@ -63,6 +62,7 @@ require (
 	github.com/gravitational/trace v1.1.16-0.20220114165159-14a9a7dd6aaf // indirect
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
+	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/labstack/gommon v0.3.0 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
@@ -86,7 +86,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.1.0 // indirect
 	github.com/vulcand/predicate v1.2.0 // indirect
-	github.com/zeebo/xxh3 v0.0.0-20191227220208-65f423c10688 // indirect
+	github.com/zeebo/xxh3 v1.0.1 // indirect
 	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
 	golang.org/x/net v0.0.0-20220826154423-83b083e8dc8b // indirect
 	golang.org/x/sys v0.0.0-20220829200755-d48e67d00261 // indirect
