@@ -3,6 +3,7 @@ module github.com/julienschmidt/go-http-routing-benchmark
 go 1.25.0
 
 require (
+	github.com/0mjs/zinc v0.2.1
 	github.com/astaxie/beego v1.12.3
 	github.com/dimfeld/httptreemux v5.0.1+incompatible
 	github.com/emicklei/go-restful/v3 v3.13.0
@@ -71,4 +72,5 @@ require (
 	google.golang.org/protobuf v1.36.10 // indirect
 	gopkg.in/ini.v1 v1.66.6 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

@@ -170,6 +170,12 @@ func BenchmarkMacaron_Param(b *testing.B) {
 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
 	benchRequest(b, router, r)
 }
+func BenchmarkZinc_Param(b *testing.B) {
+	router := loadZincSingle("GET", "/user/:name", zincHandler)
+
+	r, _ := http.NewRequest("GET", "/user/gordon", nil)
+	benchRequest(b, router, r)
+}
 
 // Route with 5 Params (no write)
 const fiveColon = "/:a/:b/:c/:d/:e"
@@ -238,6 +244,12 @@ func BenchmarkHttpTreeMux_Param5(b *testing.B) {
 }
 func BenchmarkMacaron_Param5(b *testing.B) {
 	router := loadMacaronSingle("GET", fiveColon, macaronHandler)
+
+	r, _ := http.NewRequest("GET", fiveRoute, nil)
+	benchRequest(b, router, r)
+}
+func BenchmarkZinc_Param5(b *testing.B) {
+	router := loadZincSingle("GET", fiveColon, zincHandler)
 
 	r, _ := http.NewRequest("GET", fiveRoute, nil)
 	benchRequest(b, router, r)
@@ -314,6 +326,12 @@ func BenchmarkMacaron_Param20(b *testing.B) {
 	r, _ := http.NewRequest("GET", twentyRoute, nil)
 	benchRequest(b, router, r)
 }
+func BenchmarkZinc_Param20(b *testing.B) {
+	router := loadZincSingle("GET", twentyColon, zincHandler)
+
+	r, _ := http.NewRequest("GET", twentyRoute, nil)
+	benchRequest(b, router, r)
+}
 
 // Route with Param and write
 func BenchmarkBeego_ParamWrite(b *testing.B) {
@@ -378,6 +396,12 @@ func BenchmarkHttpTreeMux_ParamWrite(b *testing.B) {
 }
 func BenchmarkMacaron_ParamWrite(b *testing.B) {
 	router := loadMacaronSingle("GET", "/user/:name", macaronHandlerWrite)
+
+	r, _ := http.NewRequest("GET", "/user/gordon", nil)
+	benchRequest(b, router, r)
+}
+func BenchmarkZinc_ParamWrite(b *testing.B) {
+	router := loadZincSingle("GET", "/user/:name", zincHandlerWrite)
 
 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
 	benchRequest(b, router, r)

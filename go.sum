@@ -1,3 +1,5 @@
+github.com/0mjs/zinc v0.2.1 h1:nnTkd4dG4+gmOc7QA/uBTfrXO4I9T1AkXCJuxfRzTWI=
+github.com/0mjs/zinc v0.2.1/go.mod h1:c0CfhQecSKZ662cirpXWyPv8pSvKj2RZwoW5p3xnAQE=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Knetic/govaluate v3.0.0+incompatible/go.mod h1:r7JcOSlj0wfOMncg0iLm8Leh48TZaKVeNIfJntJ2wa0=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=

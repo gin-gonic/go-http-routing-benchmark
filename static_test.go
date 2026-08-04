@@ -174,18 +174,19 @@ var staticRoutes = []route{
 var (
 	staticHttpServeMux http.Handler
 
-	staticBeego      http.Handler
-	staticBunRouter  http.Handler
-	staticChi        http.Handler
-	staticEcho       http.Handler
-	staticFiber      *fiber.App
-	staticGin        http.Handler
-	staticGojiv2     http.Handler
-	staticGoRestful  http.Handler
-	staticGorillaMux http.Handler
-	staticHttpRouter http.Handler
+	staticBeego       http.Handler
+	staticBunRouter   http.Handler
+	staticChi         http.Handler
+	staticEcho        http.Handler
+	staticFiber       *fiber.App
+	staticGin         http.Handler
+	staticGojiv2      http.Handler
+	staticGoRestful   http.Handler
+	staticGorillaMux  http.Handler
+	staticHttpRouter  http.Handler
 	staticHttpTreeMux http.Handler
-	staticMacaron    http.Handler
+	staticMacaron     http.Handler
+	staticZinc        http.Handler
 )
 
 func init() {
@@ -235,6 +236,9 @@ func init() {
 	calcMem("Macaron", func() {
 		staticMacaron = loadMacaron(staticRoutes)
 	})
+	calcMem("Zinc", func() {
+		staticZinc = loadZinc(staticRoutes)
+	})
 
 	println()
 }
@@ -279,4 +283,7 @@ func BenchmarkHttpTreeMux_StaticAll(b *testing.B) {
 }
 func BenchmarkMacaron_StaticAll(b *testing.B) {
 	benchRoutes(b, staticMacaron, staticRoutes)
+}
+func BenchmarkZinc_StaticAll(b *testing.B) {
+	benchRoutes(b, staticZinc, staticRoutes)
 }

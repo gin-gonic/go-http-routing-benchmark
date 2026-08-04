@@ -12,11 +12,13 @@ import (
 	"os"
 	"regexp"
 	"runtime"
+	"strings"
 
 	// If you add new routers please:
 	// - Keep the benchmark functions etc. alphabetically sorted
 	// - Make a pull request (without benchmark results) at
 	//   https://github.com/julienschmidt/go-http-routing-benchmark
+	"github.com/0mjs/zinc"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 	"github.com/dimfeld/httptreemux"
@@ -626,6 +628,57 @@ func loadMacaronSingle(method, path string, handler interface{}) http.Handler {
 	m := macaron.New()
 	m.Handle(method, path, []macaron.Handler{handler})
 	return m
+}
+
+// Zinc
+func zincHandler(_ *zinc.Context) error {
+	return nil
+}
+
+func zincHandlerWrite(c *zinc.Context) error {
+	_, err := io.WriteString(c.Writer(), c.Param("name"))
+	return err
+}
+
+func zincHandlerTest(c *zinc.Context) error {
+	_, err := io.WriteString(c.Writer(), c.Request().RequestURI)
+	return err
+}
+
+func zincPath(path string) string {
+	if !strings.ContainsAny(path, ":*") {
+		return path
+	}
+
+	segments := strings.Split(path, "/")
+	for i, segment := range segments {
+		switch {
+		case strings.HasPrefix(segment, ":"):
+			segments[i] = "{" + segment[1:] + "}"
+		case strings.HasPrefix(segment, "*"):
+			segments[i] = "{" + segment[1:] + "...}"
+		}
+	}
+	return strings.Join(segments, "/")
+}
+
+func loadZinc(routes []route) http.Handler {
+	h := zincHandler
+	if loadTestHandler {
+		h = zincHandlerTest
+	}
+
+	app := zinc.New()
+	for _, route := range routes {
+		app.Add(route.method, zincPath(route.path), h)
+	}
+	return app
+}
+
+func loadZincSingle(method, path string, handler zinc.HandlerFunc) http.Handler {
+	app := zinc.New()
+	app.Add(method, zincPath(path), handler)
+	return app
 }
 
 // Usage notice

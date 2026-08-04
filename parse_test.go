@@ -70,6 +70,7 @@ var (
 	parseHttpRouter  http.Handler
 	parseHttpTreeMux http.Handler
 	parseMacaron     http.Handler
+	parseZinc        http.Handler
 )
 
 func init() {
@@ -110,6 +111,9 @@ func init() {
 	})
 	calcMem("Macaron", func() {
 		parseMacaron = loadMacaron(parseAPI)
+	})
+	calcMem("Zinc", func() {
+		parseZinc = loadZinc(parseAPI)
 	})
 
 	println()
@@ -163,6 +167,10 @@ func BenchmarkMacaron_ParseStatic(b *testing.B) {
 	req, _ := http.NewRequest("GET", "/1/users", nil)
 	benchRequest(b, parseMacaron, req)
 }
+func BenchmarkZinc_ParseStatic(b *testing.B) {
+	req, _ := http.NewRequest("GET", "/1/users", nil)
+	benchRequest(b, parseZinc, req)
+}
 
 // One Param
 func BenchmarkBeego_ParseParam(b *testing.B) {
@@ -211,6 +219,10 @@ func BenchmarkHttpTreeMux_ParseParam(b *testing.B) {
 func BenchmarkMacaron_ParseParam(b *testing.B) {
 	req, _ := http.NewRequest("GET", "/1/classes/go", nil)
 	benchRequest(b, parseMacaron, req)
+}
+func BenchmarkZinc_ParseParam(b *testing.B) {
+	req, _ := http.NewRequest("GET", "/1/classes/go", nil)
+	benchRequest(b, parseZinc, req)
 }
 
 // Two Params
@@ -261,6 +273,10 @@ func BenchmarkMacaron_Parse2Params(b *testing.B) {
 	req, _ := http.NewRequest("GET", "/1/classes/go/123456789", nil)
 	benchRequest(b, parseMacaron, req)
 }
+func BenchmarkZinc_Parse2Params(b *testing.B) {
+	req, _ := http.NewRequest("GET", "/1/classes/go/123456789", nil)
+	benchRequest(b, parseZinc, req)
+}
 
 // All Routes
 func BenchmarkBeego_ParseAll(b *testing.B) {
@@ -298,4 +314,7 @@ func BenchmarkHttpTreeMux_ParseAll(b *testing.B) {
 }
 func BenchmarkMacaron_ParseAll(b *testing.B) {
 	benchRoutes(b, parseMacaron, parseAPI)
+}
+func BenchmarkZinc_ParseAll(b *testing.B) {
+	benchRoutes(b, parseZinc, parseAPI)
 }

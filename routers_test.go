@@ -23,6 +23,7 @@ var (
 		{"HttpRouter", loadHttpRouter},
 		{"HttpTreeMux", loadHttpTreeMux},
 		{"Macaron", loadMacaron},
+		{"Zinc", loadZinc},
 	}
 
 	// all APIs

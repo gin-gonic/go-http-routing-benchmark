@@ -276,18 +276,19 @@ var githubAPI = []route{
 }
 
 var (
-	githubBeego      http.Handler
-	githubBunRouter  http.Handler
-	githubChi        http.Handler
-	githubEcho       http.Handler
-	githubFiber      *fiber.App
-	githubGin        http.Handler
-	githubGojiv2     http.Handler
-	githubGoRestful  http.Handler
-	githubGorillaMux http.Handler
-	githubHttpRouter http.Handler
+	githubBeego       http.Handler
+	githubBunRouter   http.Handler
+	githubChi         http.Handler
+	githubEcho        http.Handler
+	githubFiber       *fiber.App
+	githubGin         http.Handler
+	githubGojiv2      http.Handler
+	githubGoRestful   http.Handler
+	githubGorillaMux  http.Handler
+	githubHttpRouter  http.Handler
 	githubHttpTreeMux http.Handler
-	githubMacaron    http.Handler
+	githubMacaron     http.Handler
+	githubZinc        http.Handler
 )
 
 func init() {
@@ -328,6 +329,9 @@ func init() {
 	})
 	calcMem("Macaron", func() {
 		githubMacaron = loadMacaron(githubAPI)
+	})
+	calcMem("Zinc", func() {
+		githubZinc = loadZinc(githubAPI)
 	})
 
 	println()
@@ -381,6 +385,10 @@ func BenchmarkMacaron_GithubStatic(b *testing.B) {
 	req, _ := http.NewRequest("GET", "/user/repos", nil)
 	benchRequest(b, githubMacaron, req)
 }
+func BenchmarkZinc_GithubStatic(b *testing.B) {
+	req, _ := http.NewRequest("GET", "/user/repos", nil)
+	benchRequest(b, githubZinc, req)
+}
 
 // Param
 func BenchmarkBeego_GithubParam(b *testing.B) {
@@ -430,6 +438,10 @@ func BenchmarkMacaron_GithubParam(b *testing.B) {
 	req, _ := http.NewRequest("GET", "/repos/julienschmidt/httprouter/stargazers", nil)
 	benchRequest(b, githubMacaron, req)
 }
+func BenchmarkZinc_GithubParam(b *testing.B) {
+	req, _ := http.NewRequest("GET", "/repos/julienschmidt/httprouter/stargazers", nil)
+	benchRequest(b, githubZinc, req)
+}
 
 // All routes
 func BenchmarkBeego_GithubAll(b *testing.B) {
@@ -467,4 +479,7 @@ func BenchmarkHttpTreeMux_GithubAll(b *testing.B) {
 }
 func BenchmarkMacaron_GithubAll(b *testing.B) {
 	benchRoutes(b, githubMacaron, githubAPI)
+}
+func BenchmarkZinc_GithubAll(b *testing.B) {
+	benchRoutes(b, githubZinc, githubAPI)
 }

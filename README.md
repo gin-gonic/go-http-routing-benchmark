@@ -20,6 +20,7 @@ Of course the tested routers can be used for any kind of HTTP request → handle
 - [HttpRouter](https://github.com/julienschmidt/httprouter)
 - [HttpTreeMux](https://github.com/dimfeld/httptreemux)
 - [Macaron](https://github.com/go-macaron/macaron)
+- [Zinc](https://github.com/0mjs/zinc)
 
 > **Note:** Fiber is based on [fasthttp](https://github.com/valyala/fasthttp) and does not implement the `net/http` `Handler` interface. Its benchmarks use a separate infrastructure and should be compared independently from the `net/http`-based routers.
 
